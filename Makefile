@@ -18,7 +18,7 @@ all: python-build docs pylint-check gotar
 
 .PHONY: test-python3-pylint
 test-python3-pylint:
-	$(PYTHON3_PYLINT) --disable=all --enable=E --enable=W --additional-builtins=_ *.py atomic Atomic tests/unit/*.py -d=no-absolute-import,print-statement,no-absolute-import,bad-builtin,catching-non-exception,raising-non-exception
+	$(PYTHON3_PYLINT) --disable=all --enable=E --enable=W --additional-builtins=_ *.py atomic Atomic tests/unit/*.py -d=no-absolute-import,print-statement,no-absolute-import,bad-builtin,catching-non-exception,raising-non-exception,bad-option-value,unexpected-keyword-arg,invalid-overridden-method
 
 .PHONY: test check test-suite
 
